@@ -7,22 +7,23 @@ export const SwimlaneItemContainer = styled.div`
   width: auto;
   flex-wrap: wrap;
   margin: auto;
+  padding: 0 2%;
 `;
 export const PosterImage = styled.img`
   src: ${(props) => props.src};
   height: auto;
   width: 10vw;
   @media only screen and (max-width: 1024px) {
-    width:25vw;
+    width: 25vw;
   }
 `;
 export const PosterContainer = styled.div`
   width: auto;
-  height:43vh;
-  margin-right:2vw;
+  height: 43vh;
+  margin-right: 2vw;
   @media only screen and (max-width: 1024px) {
-    height:33vh;
-    width:25vw;
+    height: 33vh;
+    width: 25vw;
   }
 `;
 export const PosterTitle = styled.div`
@@ -32,28 +33,31 @@ export const PosterTitle = styled.div`
   color: #999999;
   font-weight: 500;
   text-align: left;
-  width:10vw;
+  width: 10vw;
   @media only screen and (max-width: 1024px) {
     font-size: 1.1em;
     font-weight: 600;
-    width:auto;
-}
+    width: auto;
+  }
 `;
 export const GenereText = styled.div`
   position: absolute;
-  top: 15vh;
+  top: 5vh;
   left: 5vw;
   font-family: regular;
   font-size: 25px;
+  display: flex;
+  justify-content: flex-start;
   @media only screen and (max-width: 1024px) {
     top: 3vh;
     left: 3vw;
+    font-size: 20px;
   }
 `;
 export const NavBarContainer = styled.div`
-  position: relative;
+  position: fixed;
   height: 30vh;
-  width: auto;
+  width: 100%;
   @media only screen and (max-width: 1024px) {
     height: auto;
   }
@@ -61,4 +65,27 @@ export const NavBarContainer = styled.div`
 export const NavBarImage = styled.img`
   width: 100%;
   height: auto;
+  height: 20vh;
+  @media only screen and (max-width: 1024px) {
+    height: 14vh;
+  }
+`;
+export const SearchField = styled.input`
+  border: none;
+  margin-left: 60vw;
+  border-bottom: 2px solid #999999;
+  color: #999999;
+  background-color: black;
+  font-family: Regular;
+  outline: none;
+  @media only screen and (max-width: 1024px) {
+    margin-left: 15vw;
+    width: 25vw;
+  }
+`;
+export const SearchImage = styled.img`
+  src: ${(props) => props.src};
+  height: 20px;
+  width: auto;
+  margin-top: 8px;
 `;

@@ -1,10 +1,15 @@
-import './App.css';
-import Swimlane from './Components/index.js'
+import React from "react";
+import "./App.css";
+import { Suspense, lazy } from "react";
+
+const Swimlane = React.lazy(() => import("./Components/index.js"));
 
 function App() {
   return (
     <div className="App">
-    <Swimlane/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Swimlane />
+      </Suspense>
     </div>
   );
 }
