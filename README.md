@@ -1,3 +1,5 @@
 The Project consists of a responsive design for an ott platform,designed as the requirements.
-Errors:
-Unable to run the test suites successfully due to an error caused by the redux store and I was unable to solve the same in the given time.
+Errors: Test suites were causing error due to the provider component of redux hence was unable to write the full test cases
+Data would be fetched in index.js (Swimlane) component. Initially on mount of the page the data for first page would be loaded. Data for page 2 and page 3 would be loaded as user scrolls down to bottom of the page. Once the entire data is loaded data will not be fetched again. There are 2 copies of page data made one as state in the component and the other is maintained in the store,this is done because when the user filters the data from the searchbar avaliable the pagedata would be filtered out hence to initialize the data when the input field is empty a copy of full page data is maintained as state in index.js file.
+Lazy loading is implemented for swimlane component in App.js file.
+The search bar filters the avaliable data and when searched element is not found it shows No data avaliable for searched content. Data would be searched based on content present on the screen example if only page one data is present ,only that will be filtered whereas if user has scrolled down and page 3 and page 2 are loaded then filter will be done for entire data. The search bar is fully flexible in terms of searching content.
