@@ -23,8 +23,9 @@ class Swimlane extends React.Component {
   }
 
   componentDidMount() {
-    //make API call for data of 1st page and then set in the state
+    //make API call for data of 1st page and then set in the state and dispatch an event to update store
     this.setState({ fullPageData: [...pageOneData.page.contentItems.content] });
+    this.props.updateSwimlaneData(pageOneData.page.contentItems.content);
     document.addEventListener("scroll", this.trackScrolling);
   }
 
@@ -34,7 +35,7 @@ class Swimlane extends React.Component {
 
   trackScrolling = () => {
     const wrappedElement = document.getElementById("container");
-    //api call content based on page count for 2nd page
+    //api call  based on page content for 2nd page
     if (this.isBottom(wrappedElement) && this.props.pageData.length === 20) {
       //make api call for 2nd page data and if any image is not avaliable set the default image
       pageTwoData.page.contentItems.content =
@@ -42,7 +43,6 @@ class Swimlane extends React.Component {
           if (obj.posterImage === "poster4") obj.posterImage = missingPhoto;
           return obj;
         });
-      //api call content based on page count for 3rd page
       this.props.updateSwimlaneData(pageTwoData.page.contentItems.content);
       this.setState({
         fullPageData: [
@@ -74,7 +74,8 @@ class Swimlane extends React.Component {
         <SwimlaneImage title={data.name} image={data.posterImage} key={i} />
       );
     });
-    return data;
+    if (this.props.pageData.length > 0) return data;
+    else return ["No data avaliable for searched content"];
   };
   render() {
     return (

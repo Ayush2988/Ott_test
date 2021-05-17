@@ -21,11 +21,11 @@ function Navbar(props) {
         )
           return eachObj;
       });
-      props.updateSwimlaneData(filteredData);
+      props.updateFilteredSwimlaneData(filteredData);
     }
 
     //if search box is empty set pagedata to initial data,making use of fullpagedata as it has all the data whereas props pageData is filtered based on search and will have only searched content
-    else props.updateSwimlaneData(props.fullPageData);
+    else props.updateFilteredSwimlaneData(props.fullPageData);
   };
   return (
     <NavBarContainer>
@@ -54,7 +54,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    updateSwimlaneData: (payload) =>
+    updateFilteredSwimlaneData: (payload) =>
       dispatch({ type: "FILTER_SWIMLANE_DATA", payload }),
   };
 };

@@ -42,12 +42,13 @@ export const PosterTitle = styled.div`
 `;
 export const GenereText = styled.div`
   position: absolute;
-  top: 5vh;
+  top: 3vh;
   left: 5vw;
   font-family: regular;
   font-size: 25px;
   display: flex;
   justify-content: flex-start;
+  align-items:center;
   @media only screen and (max-width: 1024px) {
     top: 3vh;
     left: 3vw;
@@ -56,7 +57,7 @@ export const GenereText = styled.div`
 `;
 export const NavBarContainer = styled.div`
   position: fixed;
-  height: 30vh;
+  height: 20vh;
   width: 100%;
   @media only screen and (max-width: 1024px) {
     height: auto;
