@@ -13,7 +13,8 @@ class Swimlane extends React.Component {
     super(props);
 
     this.state = {
-      fullPageData: [], //to have a copy of the entire page data so that when data is filtered in Navbar component we have an obj
+      fullPageData: [], //having a copy of the entire page data so that when data is filtered in Navbar component we have an obj
+      //with full data avaliable to reinitialize the props pageData when the input field is changed to empty
     };
   }
   isBottom(el) {
@@ -22,8 +23,9 @@ class Swimlane extends React.Component {
   }
 
   componentDidMount() {
-    //make API call for data of 1st page and then set in the state
-    this.setState({fullPageData:[...pageOneData.page.contentItems.content]})
+    //make API call for data of 1st page and then set in the state and dispatch an event to update store
+    this.setState({ fullPageData: [...pageOneData.page.contentItems.content] });
+    this.props.updateSwimlaneData(pageOneData.page.contentItems.content)
     document.addEventListener("scroll", this.trackScrolling);
   }
 
@@ -33,6 +35,7 @@ class Swimlane extends React.Component {
 
   trackScrolling = () => {
     const wrappedElement = document.getElementById("container");
+    //api call  based on page content for 2nd page
     if (this.isBottom(wrappedElement) && this.props.pageData.length === 20) {
       //make api call for 2nd page data and if any image is not avaliable set the default image
       pageTwoData.page.contentItems.content =
@@ -40,6 +43,7 @@ class Swimlane extends React.Component {
           if (obj.posterImage === "poster4") obj.posterImage = missingPhoto;
           return obj;
         });
+      //api call  based on page content for 3rd page
       this.props.updateSwimlaneData(pageTwoData.page.contentItems.content);
       this.setState({
         fullPageData: [
