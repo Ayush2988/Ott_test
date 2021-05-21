@@ -3,12 +3,12 @@
     "main.css": "/Ott_test/static/css/main.c2e02bd9.chunk.css",
     "main.js": "/Ott_test/static/js/main.0c9e567f.chunk.js",
     "main.js.map": "/Ott_test/static/js/main.0c9e567f.chunk.js.map",
-    "runtime-main.js": "/Ott_test/static/js/runtime-main.1913002b.js",
-    "runtime-main.js.map": "/Ott_test/static/js/runtime-main.1913002b.js.map",
+    "runtime-main.js": "/Ott_test/static/js/runtime-main.757860f6.js",
+    "runtime-main.js.map": "/Ott_test/static/js/runtime-main.757860f6.js.map",
     "static/js/2.dbb31b63.chunk.js": "/Ott_test/static/js/2.dbb31b63.chunk.js",
     "static/js/2.dbb31b63.chunk.js.map": "/Ott_test/static/js/2.dbb31b63.chunk.js.map",
-    "static/js/3.cfa1c3f5.chunk.js": "/Ott_test/static/js/3.cfa1c3f5.chunk.js",
-    "static/js/3.cfa1c3f5.chunk.js.map": "/Ott_test/static/js/3.cfa1c3f5.chunk.js.map",
+    "static/js/3.079d9d43.chunk.js": "/Ott_test/static/js/3.079d9d43.chunk.js",
+    "static/js/3.079d9d43.chunk.js.map": "/Ott_test/static/js/3.079d9d43.chunk.js.map",
     "static/js/4.23811170.chunk.js": "/Ott_test/static/js/4.23811170.chunk.js",
     "static/js/4.23811170.chunk.js.map": "/Ott_test/static/js/4.23811170.chunk.js.map",
     "index.html": "/Ott_test/index.html",
@@ -24,7 +24,7 @@
     "static/media/poster9.080f3385.jpg": "/Ott_test/static/media/poster9.080f3385.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1913002b.js",
+    "static/js/runtime-main.757860f6.js",
     "static/js/2.dbb31b63.chunk.js",
     "static/css/main.c2e02bd9.chunk.css",
     "static/js/main.0c9e567f.chunk.js"
