@@ -13,16 +13,21 @@ export const PosterImage = styled.img`
   src: ${(props) => props.src};
   height: auto;
   width: 10vw;
+  &:hover{
+    width: 12vw;
+    border:2px solid black;
+  }
   @media only screen and (max-width: 1024px) {
     width: 25vw;
   }
+
 `;
 export const PosterContainer = styled.div`
-  width: auto;
-  height: 43vh;
-  margin-right: 2vw;
+  width: 13vw;
+  height: 45vh;
+  margin-right: 1vw;
   @media only screen and (max-width: 1024px) {
-    height: 33vh;
+    height: 36vh;
     width: 25vw;
   }
 `;
@@ -32,8 +37,8 @@ export const PosterTitle = styled.div`
   margin-top: 1.5vh;
   color: #999999;
   font-weight: 500;
-  text-align: left;
-  width: 10vw;
+  text-align: center;
+  width: 13vw;
   @media only screen and (max-width: 1024px) {
     font-size: 1.1em;
     font-weight: 600;
@@ -74,7 +79,7 @@ export const NavBarImage = styled.img`
 export const SearchField = styled.input`
   border: none;
   margin-left: 60vw;
-  border-bottom: 2px solid #999999;
+  border-bottom: 5px solid #999999;
   color: #999999;
   background-color: black;
   font-family: Regular;
@@ -90,3 +95,9 @@ export const SearchImage = styled.img`
   width: auto;
   margin-top: 8px;
 `;
+
+export const Loader = styled.div`
+display:flex;
+justify-content:center;
+align-items:center;
+`
